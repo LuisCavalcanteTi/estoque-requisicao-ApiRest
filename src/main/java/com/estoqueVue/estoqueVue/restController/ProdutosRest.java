@@ -14,7 +14,7 @@ import com.estoqueVue.estoqueVue.repository.ProdutosRepository;
 
 
 @RestController
-@RequestMapping("/usuario")
+@RequestMapping("/estoque")
 public class ProdutosRest {
 
 	
@@ -22,7 +22,7 @@ public class ProdutosRest {
  private ProdutosRepository produtosRepository;
  
  	
- 	@GetMapping("/vizualizar/Produtos")
+ 	@GetMapping("/visualizar/Produtos")
  	public List<ProdutosDto> vizualizarProdutos(){
  		List<Produtos> produtos =  produtosRepository.findAll();
  		return ProdutosDto.converterParaDto(produtos);
